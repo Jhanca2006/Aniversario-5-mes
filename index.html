@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Meses de Amor | Jean Carlos Martinez Cordoba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cortinilla de apertura cinematográfica -->
+    <div class="curtain-left"></div>
+    <div class="curtain-right"></div>
+    <div class="curtain-center"></div>
+
+    <!-- PARTICULAS DE LUZ -->
+    <div class="light-particles" id="lightParticles"></div>
+
+    <!-- PORTADA CINEMATOGRAFICA -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-image-wrapper">
+                <div class="hero-frame">
+                    <img src="img/WhatsApp Image 2026-02-05 at 5.40.05 PM (1).jpeg" alt="Jean Carlos Martinez Cordoba" class="hero-image">
+                </div>
+                <div class="frame-glow"></div>
+            </div>
+            
+            <div class="hero-text-container">
+                
+                <h1 class="hero-title">
+                    <span class="title-word word-1">Felices</span>
+                    <span class="title-word word-2">5</span>
+                    <span class="title-word word-3">meses</span>
+                    <span class="title-word word-4">mi amor</span>
+                </h1>
+                <h2 class="hero-subtitle">y los muchos que nos esperamos</h2>
+                <div class="hero-names">
+                    <span class="name-divider"></span>
+                    <p class="name-main">Jean Carlos Martinez Cordoba</p>
+                </div>
+                <p class="hero-date">6 de Febrero 2026</p>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Desliza para descubrir nuestra historia</span>
+        </div>
+    </section>
+
+    <!-- CONTADOR DE DÍAS -->
+    <section class="counter-section" id="counter">
+        <div class="counter-background"></div>
+        <div class="counter-container">
+            <div class="counter-header">
+                <span class="counter-icon">✦</span>
+                <h2 class="counter-title">El tiempo que hemos compartido</h2>
+                <span class="counter-icon">✦</span>
+            </div>
+            
+            <div class="counter-grid">
+                <div class="counter-unit">
+                    <div class="counter-unit-inner">
+                        <span class="counter-number" id="days">0</span>
+                        <span class="counter-label">días</span>
+                    </div>
+                    <div class="counter-unit-bg"></div>
+                </div>
+                <div class="counter-separator">
+                    <span class="separator-line"></span>
+                    <span class="separator-text">de</span>
+                    <span class="separator-line"></span>
+                </div>
+                <div class="counter-unit">
+                    <div class="counter-unit-inner">
+                        <span class="counter-number" id="hours">0</span>
+                        <span class="counter-label">horas</span>
+                    </div>
+                    <div class="counter-unit-bg"></div>
+                </div>
+                <div class="counter-separator">
+                    <span class="separator-line"></span>
+                    <span class="separator-text">de</span>
+                    <span class="separator-line"></span>
+                </div>
+                <div class="counter-unit">
+                    <div class="counter-unit-inner">
+                        <span class="counter-number" id="minutes">0</span>
+                        <span class="counter-label">minutos</span>
+                    </div>
+                    <div class="counter-unit-bg"></div>
+                </div>
+                <div class="counter-separator">
+                    <span class="separator-line"></span>
+                    <span class="separator-text">de</span>
+                    <span class="separator-line"></span>
+                </div>
+                <div class="counter-unit">
+                    <div class="counter-unit-inner">
+                        <span class="counter-number" id="seconds">0</span>
+                        <span class="counter-label">segundos</span>
+                    </div>
+                    <div class="counter-unit-bg"></div>
+                </div>
+            </div>
+            
+            <p class="counter-reflection">153 días son los que han pasado desde que nuestras vidas se entrelazaron. Cada segundo ha sido un regalo que atesoro.</p>
+        </div>
+    </section>
+
+    <!-- GALERÍA CORREDIZA (SLIDER) -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-background"></div>
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <span class="gallery-decorative">✦</span>
+                <h2 class="gallery-title">Instantes que guardo en el alma</h2>
+                <span class="gallery-decorative">✦</span>
+            </div>
+            
+            <div class="gallery-slider">
+                <div class="slider-viewport" id="sliderViewport">
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="gallery-item item-1" data-parallax="0.1">
+                            <div class="image-container">
+                                <img src="img/WhatsApp Image 2026-02-05 at 5.40.05 PM (1).jpeg" alt="Momento especial 1" class="gallery-image">
+                                <div class="image-blur"></div>
+                            </div>
+                            <div class="image-caption">
+                                <p class="caption-text">El momento en que todo comenzó a tomar forma</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item item-2" data-parallax="0.15">
+                            <div class="image-container">
+                                <img src="img/WhatsApp Image 2026-02-05 at 5.40.05 PM (2).jpeg" alt="Momento especial 2" class="gallery-image">
+                                <div class="image-blur"></div>
+                            </div>
+                            <div class="image-caption">
+                                <p class="caption-text">Tu sonrisa que ilumina mis días</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item item-3" data-parallax="0.08">
+                            <div class="image-container">
+                                <img src="img/WhatsApp Image 2026-02-05 at 5.40.58 PM.jpeg" alt="Momento especial 3" class="gallery-image">
+                                <div class="image-blur"></div>
+                            </div>
+                            <div class="image-caption">
+                                <p class="caption-text">Miradas que lo dicen todo</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item item-4" data-parallax="0.12">
+                            <div class="image-container">
+                                <img src="img/WhatsApp Image 2026-02-05 at 5.41.11 PM.jpeg" alt="Momento especial 4" class="gallery-image">
+                                <div class="image-blur"></div>
+                            </div>
+                            <div class="image-caption">
+                                <p class="caption-text">Instantes de complicidad infinita</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item item-5" data-parallax="0.05">
+                            <div class="image-container">
+                                <img src="img/WhatsApp Image 2026-02-05 at 5.40.05 PM.jpeg" alt="Momento especial 5" class="gallery-image">
+                                <div class="image-blur"></div>
+                            </div>
+                            <div class="image-caption">
+                                <p class="caption-text">La persona que hace mis días Hermosos</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Duplicar para scroll infinito -->
+                        <div class="gallery-item item-1" data-parallax="0.1">
+                            <div class="image-container">
+                                <img src="img/WhatsApp Image 2026-02-05 at 5.40.05 PM (1).jpeg" alt="Momento especial 1" class="gallery-image">
+                                <div class="image-blur"></div>
+                            </div>
+                            <div class="image-caption">
+                                <p class="caption-text">El momento en que todo comenzó a tomar forma</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item item-2" data-parallax="0.15">
+                            <div class="image-container">
+                                <img src="img/WhatsApp Image 2026-02-05 at 5.40.05 PM (2).jpeg" alt="Momento especial 2" class="gallery-image">
+                                <div class="image-blur"></div>
+                            </div>
+                            <div class="image-caption">
+                                <p class="caption-text">Tu sonrisa que ilumina mis días</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item item-3" data-parallax="0.08">
+                            <div class="image-container">
+                                <img src="img/WhatsApp Image 2026-02-05 at 5.40.58 PM.jpeg" alt="Momento especial 3" class="gallery-image">
+                                <div class="image-blur"></div>
+                            </div>
+                            <div class="image-caption">
+                                <p class="caption-text">Miradas que lo dicen todo</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item item-4" data-parallax="0.12">
+                            <div class="image-container">
+                                <img src="img/WhatsApp Image 2026-02-05 at 5.41.11 PM.jpeg" alt="Momento especial 4" class="gallery-image">
+                                <div class="image-blur"></div>
+                            </div>
+                            <div class="image-caption">
+                                <p class="caption-text">Instantes de complicidad infinita</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item item-5" data-parallax="0.05">
+                            <div class="image-container">
+                                <img src="img/WhatsApp Image 2026-02-05 at 5.40.05 PM.jpeg" alt="Momento especial 5" class="gallery-image">
+                                <div class="image-blur"></div>
+                            </div>
+                            <div class="image-caption">
+                                <p class="caption-text">La persona que hace mis días Hermosos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LINEA DE TIEMPO -->
+    <section class="timeline-section" id="timeline">
+        <div class="timeline-background"></div>
+        <div class="timeline-container">
+            <div class="timeline-header">
+                <span class="timeline-decorative">✦</span>
+                <h2 class="timeline-title">El camino que hemos recorrido</h2>
+                <span class="timeline-decorative">✦</span>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item item-left" data-depth="0.1">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">6 de Septiembre de 2025</span>
+                        <h3 class="timeline-heading">El primer día del resto de nuestra vida</h3>
+                        <p class="timeline-text">Fue un día que cambió todo. No lo sabía en ese momento, pero estaba dando el primer paso hacia algo que transformaría mi manera de ver el amor, de ver la vida, de verte a ti. Esa tarde, sin saberlo, comenzamos a escribir una historia que apenas iba a cobrar forma.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item item-right" data-depth="0.12">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Octubre de 2025</span>
+                        <h3 class="timeline-heading">El mes del descubrimiento</h3>
+                        <p class="timeline-text">Cada conversación era un nuevo mundo que explorar. Cada risa compartida, un tesoro que añadir a mi colección personal de felicidad. Empecé a notar cosas que antes pasaban desapercibidas: la forma en que tus ojos se iluminan cuando hablas de lo que te apasiona, la calidez de tu voz en las noches largas.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item item-left" data-depth="0.08">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Noviembre de 2025</span>
+                        <h3 class="timeline-heading">Cuando las palabras se volvieron innecesarias</h3>
+                        <p class="timeline-text">Llegó un momento en que ya no necesitábamos hablar para entendernos. Había una conexión que trascendía las palabras, algo profundo e inexplicable que me hacía sentir que había encontrado algo que buscaba sin saber que lo buscaba. El silencio a tu lado comenzó a sentirse como hogar.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item item-right" data-depth="0.1">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Diciembre de 2025</span>
+                        <h3 class="timeline-heading">Las fiestas más especiales</h3>
+                        <p class="timeline-text">Celebrar la temporada contigo le dio un significado completamente nuevo a las fechas que siempre habían sido importantes. No eran solo luces, decoración o regalos. Era la certeza de tenerte cerca, de saber que al despertar, tú serías parte del nuevo día.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item item-left" data-depth="0.07">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Enero de 2026</span>
+                        <h3 class="timeline-heading">Un nuevo comienzo juntos</h3>
+                        <p class="timeline-text">El año cambió, pero lo que más importaba no lo hizo: tu presencia en mi vida. Empezamos este nuevo capítulo sabiendo que ya no estábamos al principio de algo, sino construyendo algo sólido que tendría muchos más capítulos por escribir.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item item-right" data-depth="0.05">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">6 de Febrero de 2026</span>
+                        <h3 class="timeline-heading">Cinco meses de ti</h3>
+                        <p class="timeline-text">Y aquí estamos, celebrando no solo el tiempo pasado, sino la promesa de todo lo que está por venir. Cinco meses parecen poco cuando pienso en todo lo que aún quiero vivir a tu lado, pero parecen una eternidad bendita cuando recuerdo todo lo que ya hemos construido juntos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EL CAMINO RECORRIDO (CARTA) CON ANIMACIÓN TIPO WRITING -->
+    <section class="letter-section" id="letter">
+        <div class="letter-background"></div>
+        <div class="letter-container">
+            <div class="letter-paper">
+                <div class="letter-header">
+                    <span class="letter-decorative">✦</span>
+                    <h2 class="letter-title">El camino recorrido</h2>
+                    <span class="letter-decorative">✦</span>
+                </div>
+                
+                <div class="letter-body">
+                    <p class="letter-paragraph typing-text" data-text="Mi amor,">Mi amor,</p>
+                    
+                    <p class="letter-paragraph typing-text" data-text="Han pasado ciento cincuenta y tres días desde que nuestras vidas se cruzaron de esa manera que solo puede describirse como destino. Ciento cincuenta y tres días en los que he descubierto que el amor real no es aquel que prometen las películas o los libros, sino el que se construye en los pequeños momentos cotidianos, en las conversaciones largas de la madrugada, en los silencios cómodos, en las risas que nos impiden respirar.">Han pasado ciento cincuenta y tres días desde que nuestras vidas se cruzaron de esa manera que solo puede describirse como destino. Ciento cincuenta y tres días en los que he descubierto que el amor real no es aquel que prometen las películas o los libros, sino el que se construye en los pequeños momentos cotidianos, en las conversaciones largas de la madrugada, en los silencios cómodos, en las risas que nos impiden respirar.</p>
+                    
+                    <p class="letter-paragraph typing-text" data-text="Recuerdo September 6 con una claridad que me sorprende. Recuerdo cómo me sentí al conocerte, esa mezcla de nerviosismo y una paz extraña, como si de alguna forma ya te conociera de antes, como si mi alma te hubiera estado buscando sin que yo lo supiera. Y luego vinieron los días, las semanas, los meses. Cada uno trayendo consigo nuevas capas de conocimiento sobre ti, sobre nosotros, sobre lo que significa realmente compartir tu vida con alguien.">Recuerdo September 6 con una claridad que me sorprende. Recuerdo cómo me sentí al conocerte, esa mezcla de nerviosismo y una paz extraña, como si de alguna forma ya te conociera de antes, como si mi alma te hubiera estado buscando sin que yo lo supiera. Y luego vinieron los días, las semanas, los meses. Cada uno trayendo consigo nuevas capas de conocimiento sobre ti, sobre nosotros, sobre lo que significa realmente compartir tu vida con alguien.</p>
+                    
+                    <p class="letter-paragraph typing-text" data-text="He aprendido que amar no es solo sentir, sino elegir. Elegirte a ti cada día, incluso en los momentos difíciles, incluso cuando la vida se pone complicada. He aprendido que tu risa es el sonido más hermoso que he escuchado, que tu forma de ver el mundo es contagiosa, que tu bondad me inspira a ser una mejor persona.">He aprendido que amar no es solo sentir, sino elegir. Elegirte a ti cada día, incluso en los momentos difíciles, incluso cuando la vida se pone complicada. He aprendido que tu risa es el sonido más hermoso que he escuchado, que tu forma de ver el mundo es contagiosa, que tu bondad me inspira a ser una mejor persona.</p>
+                    
+                    <p class="letter-paragraph typing-text" data-text="Estos cinco meses me han enseñado que la conexión verdadera no necesita explicaciones. Que hay personas que llegan a tu vida y la transforman sin esfuerzo, sin drama, simplemente siendo quienes son. Tú llegaste así, silenciosa y profundamente, mengubah todo sin darme cuenta.">Estos cinco meses me han enseñado que la conexión verdadera no necesita explicaciones. Que hay personas que llegan a tu vida y la transforman sin esfuerzo, sin drama, simplemente siendo quienes son. Tú llegaste así, silenciosa y profundamente, mengubah todo sin darme cuenta.</p>
+                    
+                    <p class="letter-paragraph typing-text" data-text="He guardado cada mensaje, cada foto, cada recuerdo. Los tengo en un lugar especial de mi corazón, esos donde guardamos las cosas que no queremos olvidar nunca. Porque aunque el tiempo passe y las memorias se desvanezcan, quiero seguir recordando cómo me siento contigo. Quiero seguir sintiendo esta paz, esta alegría, esta certeza de haber encontrado algo valioso.">He guardado cada mensaje, cada foto, cada recuerdo. Los tengo en un lugar especial de mi corazón, esos donde guardamos las cosas que no queremos olvidar nunca. Porque aunque el tiempo passe y las memorias se desvanezcan, quiero seguir recordando cómo me siento contigo. Quiero seguir sintiendo esta paz, esta alegría, esta certeza de haber encontrado algo valioso.</p>
+                    
+                    <p class="letter-paragraph typing-text" data-text="El camino que hemos recorrido juntos en estos cinco meses no ha sido siempre fácil, pero ha sido nuestro. Ha estado lleno de momentos hermosos que atesoro, de conversaciones que me han hecho pensar, de silencios que me han hecho sentir comprendido, de risas que han llenado mis días de luz.">El camino que hemos recorrido juntos en estos cinco meses no ha sido siempre fácil, pero ha sido nuestro. Ha estado lleno de momentos hermosos que atesoro, de conversaciones que me han hecho pensar, de silencios que me han hecho sentir comprendido, de risas que han llenado mis días de luz.</p>
+                </div>
+                
+                <div class="letter-signature">
+                    <p class="signature-text typing-text" data-text="Con todo mi amor y gratitud por cada día compartido,">Con todo mi amor y gratitud por cada día compartido,</p>
+                    <p class="signature-name typing-text" data-text="Jean Carlos Martinez Cordoba">Jean Carlos Martinez Cordoba</p>
+                    <p class="signature-date typing-text" data-text="6 de Febrero de 2026">6 de Febrero de 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AGRADECIMIENTO -->
+    <section class="gratitude-section" id="gratitude">
+        <div class="gratitude-background"></div>
+        <div class="gratitude-container">
+            <div class="gratitude-content">
+                <span class="gratitude-icon">✦</span>
+                <h2 class="gratitude-title">Gracias</h2>
+                <div class="gratitude-text">
+                    <p>Gracias por cada mañana en que tu nombre aparece en mi pantalla.</p>
+                    <p>Gracias por cada noche en que me quedo dormido pensando en ti.</p>
+                    <p>Gracias por tu paciencia cuando no tengo las palabras correctas.</p>
+                    <p>Gracias por tu risa, que es música para mis oídos.</p>
+                    <p>Gracias por verme tal como soy y aceptar mis imperfecciones.</p>
+                    <p>Gracias por creer en nosotros incluso cuando todo parece complicado.</p>
+                    <p>Gracias por ser tú, sin máscaras, sin pretensiones.</p>
+                    <p>Gracias por elegirme, de entre todas las personas que pudiste haber elegido.</p>
+                    <p>Gracias por los cinco meses más hermosos de mi vida.</p>
+                </div>
+                <span class="gratitude-icon">✦</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENSAJE FINAL -->
+    <section class="final-section" id="final">
+        <div class="final-background"></div>
+        <div class="final-container">
+            <div class="final-content">
+                <div class="final-stars">
+                    <span>✦</span>
+                    <span class="star-center">✦</span>
+                    <span>✦</span>
+                </div>
+                
+                <h2 class="final-title">Lo que viene</h2>
+                
+                <div class="final-text">
+                    <p>No sé exactamente qué nos depara el futuro. No tengo una bola mágica que me muestre el camino que recorreremos juntos. Pero hay algo de lo que estoy completamente seguro: quiero averiguarlo contigo.</p>
+                    
+                    <p>Quiero ver cómo cambian las estaciones, cómo envejecemos, cómo nuestros sueños evolucionan. Quiero estar ahí cuando alcances tus metas y cuando enfrentes tus desafíos. Quiero construir algo contigo, algo real, algo nousse.</p>
+                    
+                    <p>Estos cinco meses han sido solo el comienzo de algo hermoso. Y aunque no puedo prometer que será fácil, puedo prometerte que valdrá la pena. Que cada desafío que enfrentemos nos hará más fuertes. Que cada risa que compartamos será un tesoro. Que cada día que pase a tu lado será un día bien vivido.</p>
+                    
+                    <p class="final-question">¿Estás lista para seguir escribiendo esta historia conmigo? y comer mucho kiwi</p>
+                </div>
+                
+                <div class="final-signature">
+                    <p class="final-names">Jean Carlos Martinez Cordoba</p>
+                    <p class="final-date">6 de Febrero de 2026</p>
+                </div>
+                
+                <div class="final-stars">
+                    <span>✦</span>
+                    <span class="star-center">✦</span>
+                    <span>✦</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">Creado con amor para celebrar nuestros 5 meses</p>
+            <p class="footer-names">Jean Carlos Martinez Cordoba</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
