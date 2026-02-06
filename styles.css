@@ -934,6 +934,7 @@ body {
     }
 }
 
+/* Estilos modernos para imágenes de la galería */
 .gallery-item {
     flex: 0 0 350px;
     margin: 0 10px;
@@ -941,6 +942,8 @@ body {
     opacity: 1;
     transform: translateY(0);
     transition: transform 0.8s ease;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
 }
 
 .gallery-item:hover {
@@ -950,7 +953,7 @@ body {
 .gallery-item .image-container {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 100%;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: var(--sombra-media);
@@ -990,8 +993,21 @@ body {
     transform: scale(1.05);
 }
 
-/* En móvil, reducir aún más el zoom para mejor visualización */
+/* Media query específica para móviles */
 @media (max-width: 768px) {
+    .gallery-item {
+        flex: 0 0 80vw;
+        max-width: 80vw;
+        aspect-ratio: 3 / 4;
+        overflow: hidden;
+    }
+    
+    .gallery-item .gallery-image {
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    /* En móvil, reducir aún más el zoom para mejor visualización */
     .gallery-item:hover .gallery-image {
         transform: scale(1.03);
     }
@@ -1610,6 +1626,8 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .lightbox.active {
@@ -1619,10 +1637,13 @@ body {
 
 .lightbox-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
+    max-height: 80vh;
     transform: scale(0.8);
     transition: transform 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .lightbox.active .lightbox-content {
@@ -1631,7 +1652,8 @@ body {
 
 .lightbox-image {
     max-width: 100%;
-    max-height: 85vh;
+    max-height: 80vh;
+    object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
 }
@@ -1937,16 +1959,21 @@ body {
     }
     
     .gallery-item {
-        flex: 0 0 calc(100% - 20px);
+        flex: 0 0 85vw;
         margin: 0 5px;
+        aspect-ratio: 3 / 4;
+        overflow: hidden;
     }
     
     .gallery-item .image-container {
-        height: 260px;
+        height: 100%;
+        max-height: 60vh;
         border-radius: 10px;
     }
     
     .gallery-item .gallery-image {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         object-position: center;
     }
@@ -1977,7 +2004,7 @@ body {
     
     /* Slider más lento en móvil pequeño */
     .slider-track {
-        animation: marquee-scroll-mobile 80s linear infinite;
+        animation: marquee-scroll-mobile 35s linear infinite;
     }
     
     @keyframes marquee-scroll-mobile {
