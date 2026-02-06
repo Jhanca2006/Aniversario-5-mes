@@ -979,12 +979,22 @@ body {
 .gallery-item .gallery-image {
     width: 100%;
     height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 1s ease;
 }
 
 .gallery-item:hover .gallery-image {
-    transform: scale(1.15);
+    transform: scale(1.05);
+}
+
+/* En móvil, reducir aún más el zoom para mejor visualización */
+@media (max-width: 768px) {
+    .gallery-item:hover .gallery-image {
+        transform: scale(1.03);
+    }
 }
 
 /* Efecto de brillo en hover */
@@ -1923,17 +1933,17 @@ body {
     }
     
     .gallery-slider {
-        padding: 0 15px;
+        padding: 0 10px;
     }
     
     .gallery-item {
-        flex: 0 0 calc(100% - 30px);
-        margin: 0 15px;
+        flex: 0 0 calc(100% - 20px);
+        margin: 0 5px;
     }
     
     .gallery-item .image-container {
-        height: 320px;
-        border-radius: 12px;
+        height: 260px;
+        border-radius: 10px;
     }
     
     .gallery-item .gallery-image {
@@ -1941,14 +1951,33 @@ body {
         object-position: center;
     }
     
-    .gallery-item .caption-text {
-        font-size: 1rem;
-        padding: 0 10px;
+    .gallery-item .image-caption {
+        bottom: 12px;
+        padding: 0 8px;
     }
     
-    /* Marquee más lento para móvil */
+    .gallery-item .caption-text {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+    
+    /* Desactivar efectos hover en táctil para mejor experiencia móvil */
+    .gallery-item:hover .image-container::before,
+    .gallery-item:hover .image-caption {
+        opacity: 0;
+    }
+    
+    .gallery-item:hover .gallery-image {
+        transform: scale(1);
+    }
+    
+    .gallery-item:hover {
+        transform: translateY(0);
+    }
+    
+    /* Slider más lento en móvil pequeño */
     .slider-track {
-        animation: marquee-scroll-mobile 60s linear infinite;
+        animation: marquee-scroll-mobile 80s linear infinite;
     }
     
     @keyframes marquee-scroll-mobile {
@@ -1961,7 +1990,8 @@ body {
     }
     
     .gallery-title {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
+        padding: 0 8px;
     }
     
     .slider-arrow {
@@ -2029,3 +2059,35 @@ body {
         font-size: 1.1rem;
     }
 }
+
+/* ═══════════════════════════════════════════════════════
+    ESTILOS PARA DISPOSITIVOS TÁCTILES (MÓVIL)
+    Desactiva efectos hover y muestra captions siempre
+    ═══════════════════════════════════════════════════════ */
+@media (hover: none) and (pointer: coarse) {
+    .gallery-item .image-container::before {
+        opacity: 1;
+        background: linear-gradient(180deg,
+            transparent 0%,
+            transparent 30%,
+            rgba(0, 0, 0, 0.5) 100%);
+    }
+    
+    .gallery-item .image-caption {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .gallery-item:hover {
+        transform: translateY(0);
+    }
+    
+    .gallery-item:hover .gallery-image {
+        transform: scale(1);
+    }
+    
+    .gallery-item:hover .image-container::before {
+        opacity: 1;
+    }
+}
+
