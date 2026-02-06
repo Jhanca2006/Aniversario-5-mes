@@ -1923,11 +1923,41 @@ body {
     }
     
     .gallery-slider {
-        padding: 0 40px;
+        padding: 0 15px;
+    }
+    
+    .gallery-item {
+        flex: 0 0 calc(100% - 30px);
+        margin: 0 15px;
     }
     
     .gallery-item .image-container {
-        height: 250px;
+        height: 320px;
+        border-radius: 12px;
+    }
+    
+    .gallery-item .gallery-image {
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .gallery-item .caption-text {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    /* Marquee más lento para móvil */
+    .slider-track {
+        animation: marquee-scroll-mobile 60s linear infinite;
+    }
+    
+    @keyframes marquee-scroll-mobile {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
     }
     
     .gallery-title {

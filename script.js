@@ -217,9 +217,13 @@ function initGallerySlider() {
         
         if (Math.abs(diff) > swipeThreshold) {
             // Reiniciar animación al hacer swipe
+            const isMobile = window.innerWidth <= 480;
+            const animationName = isMobile ? 'marquee-scroll-mobile' : 'marquee-scroll';
+            const duration = isMobile ? '60s' : '40s';
+            
             track.style.animation = 'none';
             track.offsetHeight; // Trigger reflow
-            track.style.animation = 'marquee-scroll 40s linear infinite';
+            track.style.animation = `${animationName} ${duration} linear infinite`;
         }
     }
 }
